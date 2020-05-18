@@ -24,6 +24,7 @@ AGameModeExample::OnConstruction(const FTransform& Transform)
 {
 	Super::OnConstruction(Transform);
 	
+	// Spawn the EXAMPLE Manager Class
 	YOURGAMEManager = GetWorld()->SpawnActor<AYOURGAMEManager>(YOURGAMEManagerClass);
 }
 
@@ -32,4 +33,14 @@ void AGameModeExample::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	// PRINT SCREEN: GEngine->AddOnScreenDebugMessage(-1, 0.05f, FColor::Turquoise, FString::SanitizeFloat(DeltaTime));
 	// LOG MESSAGE: UE_LOG(YOURGAMEDebugLog, Log, TEXT("Delta Time is '%s'"), *FString::SanitizeFloat(DeltaTime));
+}
+
+void AGameModeExample::BeginPlay()
+{
+	Super::BegingPlay();
+	
+	// TODO: Read this from your Load file
+	CurrentGameState = EGameState::Normal;
+	
+	// Do things like starting a Score List or loading characters in checkpoints
 }
