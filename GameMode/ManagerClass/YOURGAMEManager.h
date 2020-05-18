@@ -1,3 +1,5 @@
+// Copyright @Khaliszt
+
 // YOURGAME
 #include "YOURGAME.h"
 
