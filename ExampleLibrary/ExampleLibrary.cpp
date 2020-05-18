@@ -1,3 +1,5 @@
+// Copyright @Khaliszt
+
 // Header file
 #include "ExampleLibrary.h"
 
