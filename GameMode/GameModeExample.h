@@ -1,3 +1,5 @@
+// Copyright @Khaliszt
+
 #pragma once
 
 #include "YOURGAME.h"
