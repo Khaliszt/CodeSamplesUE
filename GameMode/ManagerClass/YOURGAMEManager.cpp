@@ -15,15 +15,14 @@ void AYOURGAMEManager::BeginPlay()
   // Get Game Mode
   if(AGameModeBase* GameMode = UGameplayStatics::GetGameMode(GetWorld()))
 	{
-    // Get Custom Game Mode
+    		 // Get Custom Game Mode
 		 if(AGameModeExample* GameModeCast = Cast<AGameModeExample>(GameMode))
 		 {
-			 CustomGameMode  = GameModeCast; // Declared in Header
-			 // Bind the Custom State
-       CustomGameMode->OnGameStateChanged.AddDynamic(this, &YOURGAMEManager::OnGameStateChanged);
+			CustomGameMode  = GameModeCast; // Declared in Header
+			// Bind the Custom State
+       			CustomGameMode->OnGameStateChanged.AddDynamic(this, &YOURGAMEManager::OnGameStateChanged);
 		 }
 	}
-  
 }
 
 void AYOURGAMEManager::EndPlay(const EEndPlayReason::Type EndPlayReason)
