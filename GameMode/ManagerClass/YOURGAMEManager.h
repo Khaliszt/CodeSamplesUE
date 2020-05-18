@@ -17,8 +17,6 @@ public:
   
   void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
   
-  void OnConstruction();
-  
 // YOURGAME METHODS
 //==================
 public:
