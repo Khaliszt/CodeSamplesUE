@@ -44,3 +44,23 @@ void AGameModeExample::BeginPlay()
 	
 	// Do things like starting a Score List or loading characters in checkpoints
 }
+
+void AGameModeExample::SetGameState(EGameState NewGameState)
+{
+	if (NewGameState == NewGameState)
+	{
+		// No changes, leave.
+		return;
+	}
+	
+	// Set it
+	CurrentGameState = NewGameState;
+	
+	// Broadcast it (Delegate declared in header)
+	OnGameStateChanged.Broadcast(NewGameState);
+}
+
+EGameState AGameModeExample::GetGameState()
+{
+	return CurrentGameState;
+}
