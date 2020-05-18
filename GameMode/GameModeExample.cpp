@@ -5,7 +5,8 @@
 #include "YOURGAMEManager.h"
 
 // ==== EXAMPLE CLASS ====
-ARATSGameModeGameplay::ARATSGameModeGameplay()
+// CONSTRUCTOR
+AGameModeExample::AGameModeExample()
 {
 	PrimaryActorTick.bCanEverTick = true; // TODO: Can be false
 	
@@ -13,5 +14,13 @@ ARATSGameModeGameplay::ARATSGameModeGameplay()
 	static ConstructorHelpers::FClassFinder<AYOURGAMEManager> YOURGAMEManagerBPClass (TEXT("/Game/ Your Directory to the class in the Editor"));
 	if (YOURGAMEManagerBPClass.Class != NULL)
 	{
-		DefaultPawnClass = YOURGAMEManagerBPClass.Class;
+		YOURGAMEManager = YOURGAMEManagerBPClass.Class;
+	}
 }
+
+// EDITOR CONSTRUCTOR
+AGameModeExample::OnConstruction(const FTransform& Transform)
+{
+	Super::OnConstruction(Transform);
+}
+
