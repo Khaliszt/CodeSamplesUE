@@ -7,6 +7,7 @@
 // YOURGAME
 #include "YOURGAME.h"
 #include "GameModeExample.h"
+#include "CustomActor.h"
 
 void AYOURGAMEManager::BeginPlay()
 {
