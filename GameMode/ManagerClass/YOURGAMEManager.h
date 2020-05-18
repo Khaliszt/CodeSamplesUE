@@ -1,10 +1,10 @@
-// Header
-#include "YOURGameManager.h"
-
 // YOURGAME
 #include "YOURGAME.h"
-#include "GameModeExample.h"
 
+// Forward Declarations
+class ACustomActor;
+class AGameModeExample;
+  
 UCLASS()
 class YOURGAME_API AYOURGAMEManager : public AActor
 {
