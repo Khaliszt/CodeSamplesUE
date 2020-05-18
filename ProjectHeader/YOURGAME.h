@@ -72,17 +72,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float SecondValue;
 
-  UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (MakeEditWidget = "true")) // This transform's Location will be editable within the editor
-  FTransform Transform;
+  	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (MakeEditWidget = "true")) // This transform's Location will be editable within the editor
+  	FTransform Transform;
   
-  UPROPERTY(EditAnywhere, BlueprintReadOnly)
-  int32 ID;
+ 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+  	int32 ID;
   
-  FYourNewStruct()
-  {
-    FirstValue = 1.f;
-    SecondValue = 2.f;
-    Transform = FTransform(FRotator::ZeroRotator, FVector::ZeroVector, FVector::OneVector);
-    ID = 0;
-  }
+  	FYourNewStruct()
+  	{
+    		FirstValue = 1.f;
+    		SecondValue = 2.f;
+    		Transform = FTransform(FRotator::ZeroRotator, FVector::ZeroVector, FVector::OneVector);
+    		ID = 0;
+  	}
 };
