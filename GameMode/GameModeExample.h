@@ -7,6 +7,9 @@
 
 #include "GameModeExample.generated.h"
 
+// YOURGAME
+#include "AYOURGAMEManagerClass.h"
+
 // ==== EXAMPLE DELEGATE DECLARATION ====
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnGameStateChanged, EGameState, NewGameState); // ENUM declared in YOURGAME.h !! 
 
@@ -45,6 +48,10 @@ public:
 // STATES
 UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GameModeExample|States")
 EGameState CurrentGameState = EGameState::Normal;
+
+// Managers
+UPROPERTY(Transient)
+class AYOURGAMEManagerClass* YOURGAMEManager = nullptr;
 
 protected:
 private:
