@@ -14,19 +14,22 @@ AGameModeExample::AGameModeExample()
 	static ConstructorHelpers::FClassFinder<AYOURGAMEManager> YOURGAMEManagerBPClass (TEXT("/Game/ Your Directory to the class in the Editor"));
 	if (YOURGAMEManagerBPClass.Class != NULL)
 	{
-		YOURGAMEManager = YOURGAMEManagerBPClass.Class;
+		YOURGAMEManagerClass = YOURGAMEManagerBPClass.Class;
 	}
+	// TODO: To use the C++ Class directly just use AYOURGAMEManager::StaticClass();
 }
 
 // EDITOR CONSTRUCTOR
 AGameModeExample::OnConstruction(const FTransform& Transform)
 {
 	Super::OnConstruction(Transform);
+	
+	YOURGAMEManager = GetWorld()->SpawnActor<AYOURGAMEManager>(YOURGAMEManagerClass);
 }
 
 void AGameModeExample::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	// GEngine->AddOnScreenDebugMessage(-1, 0.05f, FColor::Turquoise, FString::SanitizeFloat(DeltaTime));
-	// UE_LOG(YOURGA);
+	// PRINT SCREEN: GEngine->AddOnScreenDebugMessage(-1, 0.05f, FColor::Turquoise, FString::SanitizeFloat(DeltaTime));
+	// LOG MESSAGE: UE_LOG(YOURGAMEDebugLog, Log, TEXT("Delta Time is '%s'"), *FString::SanitizeFloat(DeltaTime));
 }
