@@ -44,7 +44,7 @@ protected:
   
   // REFERENCES
   UPROPERTY(Transient)
-  class AGameModeExample* CustomGameMode = nullptr;
+  AGameModeExample* CustomGameMode = nullptr;
   
   // OTHERS
   TSet<ACustomActor> CustomActorsSet;
