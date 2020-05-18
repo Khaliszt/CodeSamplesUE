@@ -36,3 +36,40 @@ void AYOURGAMEManager::EndPlay(const EEndPlayReason::Type EndPlayReason)
    // Null pointers
    CustomGameMode = nullptr;
 }
+
+void AYOURGAMEManager::RegisterCustomActor(ACustomActor* NewActor)
+{
+	if (!NewActor)
+	{
+		return;
+	}
+	
+	if (!CustomActorsSet.Contains(ActorToErase)) // Not really needed as Add() has an internal check, but it's safer and avoids cascading.
+	{
+		CustomActorsSet.Add(NewActor);
+	}
+	
+}
+  
+void AYOURGAMEManager::EraseCustomActor(ACustomActor* ActorToErase)
+{
+	if (!ActorToErase)
+	{
+		return;
+	}
+	
+	CustomActorsSet.Remove(ActorToErase);
+
+}
+  
+int AYOURGAMEManager::GetCustomActorsAmount()
+{
+	 return CustomActorsSet.Num();
+}
+
+void AYOURGAMEManager::OnGameStateChanged(EGameState NewGameState)
+{
+	CurrentGameState = NewGameState;
+	
+	// Do things based on the new Game State
+}
