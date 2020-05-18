@@ -51,7 +51,7 @@ EGameState CurrentGameState = EGameState::Normal;
 
 // Managers
 UPROPERTY(Transient)
-class AYOURGAMEManagerClass* YOURGAMEManager = nullptr;
+class AYOURGAMEManagerClass* YOURGAMEManagerClass = nullptr;
 
 protected:
 private:
