@@ -49,7 +49,11 @@ public:
 UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GameModeExample|States")
 EGameState CurrentGameState = EGameState::Normal;
 
-// Managers
+// DELEGATES
+UPROPERTY(BlueprintAssignable, Category = "GameModeExample|Delegates")
+FOnGameStateChanged OnGameStateChanged;
+	
+// MANAGERS
 UPROPERTY(Transient)
 class AYOURGAMEManagerClass* YOURGAMEManagerClass = nullptr;
 
