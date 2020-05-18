@@ -37,15 +37,23 @@ DECLARE_LOG_CATEGORY_EXTERN(YOURGAMECriticalErrorsLog, Fatal, All);
 // Logging for Debug stuff. 
 DECLARE_LOG_CATEGORY_EXTERN(YOURGAMEDebugLog, Log, All);
 
-// ==== EXAMPLE ENUM ====
+// ==== EXAMPLE ENUMS ====
 UENUM(BlueprintType)
 enum class EYourNewEnum : uint8 // Todo: I like to use uint8 for conversions
 {
-	YNE_FirstEntry			UMETA(DisplayName = "First"),
-	YNE_SecondEntry			UMETA(DisplayName = "Second"),
-	YNE_ThirdEntry		  UMETA(DisplayName = "Third"),
-	YNE_FourthEntry		  UMETA(DisplayName = "Fourth"),
-	YNE_MAX 			      UMETA(Hidden)
+	YNE_FirstEntry		UMETA(DisplayName = "First"),
+	YNE_SecondEntry		UMETA(DisplayName = "Second"),
+	YNE_ThirdEntry		UMETA(DisplayName = "Third"),
+	YNE_FourthEntry		UMETA(DisplayName = "Fourth"),
+	YNE_MAX 		UMETA(Hidden)
+};
+
+UENUM(BlueprintType)
+enum class EGameState : uint8
+{
+	GS_Basic		UMETA(DisplayName = "Basic"),
+	GS_Altered		UMETA(DisplayName = "Altered"),
+	GS_MAX			UMETA(Hidden)
 };
 
 // ==== EXAMPLE STRUCT ====
