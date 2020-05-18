@@ -1,3 +1,5 @@
+// Copyright @Khaliszt
+
 // Header
 #include "GameModeExample.h"
 
