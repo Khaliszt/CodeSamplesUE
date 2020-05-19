@@ -14,8 +14,7 @@
 #define SET_BIT(Bitmask, Bit) (Bitmask |= 1 << static_cast<uint8>(Bit))
 #define CLEAR_BIT(Bitmask, Bit) (Bitmask &= ~(1 << static_cast<uint8>(Bit)))
 
-#define START_BITMASK_SWITCH(x) \
-    for (uint8 bit = 1; x >= bit; bit *= 2) if (x & bit) switch (bit)
+#define START_BITMASK_SWITCH(x) \ for (uint8 bit = 1; x >= bit; bit *= 2) if (x & bit) switch (bit)
 
 // EXAMPLE Object Channels Definitions
 #define ECC_Something		  	ECC_GameTraceChannel1 // Values According to Project's DefaultEngine.ini file 
@@ -41,7 +40,7 @@ DECLARE_LOG_CATEGORY_EXTERN(YOURGAMEDebugLog, Log, All);
 
 // ==== EXAMPLE ENUMS ====
 UENUM(BlueprintType)
-enum class EYourNewEnum : uint8 // Todo: I like to use uint8 for conversions
+enum class EYourNewEnum : uint8 // Todo: I like to use uint8, in case I need conversions or comparisons
 {
 	YNE_FirstEntry		UMETA(DisplayName = "First"),
 	YNE_SecondEntry		UMETA(DisplayName = "Second"),
