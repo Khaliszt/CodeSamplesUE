@@ -10,7 +10,7 @@
 // CONSTRUCTOR
 AGameModeExample::AGameModeExample()
 {
-	PrimaryActorTick.bCanEverTick = true; // TODO: Can be false
+	PrimaryActorTick.bCanEverTick = true; // TODO: Can be false too
 	
 	// Get and Set the YOURGAMEManager from the editor's BP Version
 	static ConstructorHelpers::FClassFinder<AYOURGAMEManager> YOURGAMEManagerBPClass (TEXT("/Game/ Your Directory to the class in the Editor"));
