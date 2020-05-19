@@ -8,7 +8,7 @@
 #include "UObject/NoExportTypes.h"
 #include "ExampleLibrary.generated.h"
 
-// Structure designed for the return types of some functions of the ExampleLibrary. 
+// Example Structure designed for the return types of some functions of the ExampleLibrary. 
 USTRUCT(BlueprintType)
 struct FComparisonFunctionsHelper
 {
