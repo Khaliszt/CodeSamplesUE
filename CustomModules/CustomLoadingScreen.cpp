@@ -1,4 +1,4 @@
-/* This is an easy accesor I made to apply a native UE4 feature for loading levels asynchronously and having your load screen unlocked
+/* This is an Example of an easy accesor I made to apply a native UE4 feature for loading levels asynchronously and having your load screen unlocked
 from the main thread. The code itself is partly Epic Games', and what I offer is an easy way of applying it as a module to your game.
 
 This includes various files from your Custom Module's folder and the game's build files.
