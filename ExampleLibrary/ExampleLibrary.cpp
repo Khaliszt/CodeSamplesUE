@@ -5,9 +5,9 @@
 
 // Engine
 #include "Runtime/Engine/Classes/Components/AudioComponent.h"
+#include "Runtime/Engine/Classes/Sound/SoundBase.h"
 #include "Runtime/Engine/Classes/Kismet/KismetMathLibrary.h"
 #include "Runtime/Engine/Classes/Components/PrimitiveComponent.h"
-
 
 void UExampleLibrary::PlayAudioComponentSound(UAudioComponent* AudioComponent, USoundBase* Sound, const float StartTime, const bool bFadePrevious, const float FadeTime, const float FadeLevel)
 {
