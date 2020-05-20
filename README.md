@@ -1,5 +1,5 @@
 # CodeSamplesUE
-This is a showcase of UE4 a few code samples of the work I've made in the past years 
+This is a showcase of a few UE4 code samples from work I've made in the past years. It is reduced and intended to work together as if they were part of an Unreal Engine project that we'll refer to as YOURPROJECT. Custom classes could use this codename or CUSTOM, depending on what I showcase.
 
 # The files act as if they formed part of the same project
 Read through the files to find their relations and how they use the other 'features' of this project. 
